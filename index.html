@@ -27,12 +27,12 @@
     html{scroll-behavior:smooth}
     body{margin:0;font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";color:#000000;background:var(--bg);}  
     .wrap{max-width:1100px;margin:0 auto;padding:20px}
-    header{position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:saturate(120%) blur(8px);z-index:50;border-bottom:1px solid #e5e7eb;box-shadow:0 2px 10px rgba(0,0,0,.04)}
-    header .inner{display:flex;gap:16px;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto;padding:10px 20px}
-    a.brand{display:flex;gap:10px;align-items:center;text-decoration:none;color:var(--text)}
-    .badge{font-size:.75rem;padding:2px 8px;border-radius:999px;background:rgba(20,184,166,.15);color:var(--accent)}
-    nav a{color:var(--muted);text-decoration:none;margin-left:18px}
-    nav a:hover{color:var(--text)}
+    header{position:sticky;top:0;background:var(--accent);color:#ffffff;backdrop-filter:none;z-index:50;border-bottom:0;box-shadow:0 6px 18px rgba(2,6,23,.18)}
+    header .inner{display:flex;gap:16px;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto;padding:20px 24px}
+    a.brand{display:flex;gap:10px;align-items:center;text-decoration:none;color:#ffffff}
+    .badge{font-size:.75rem;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.18);color:#ffffff;border:1px solid rgba(255,255,255,.35)}
+    nav a{color:rgba(255,255,255,.9);text-decoration:none;margin-left:18px}
+    nav a:hover{color:#ffffff}
     .hero{padding:80px 20px 40px}
     .hero h1{font-size:clamp(28px,6vw,48px);line-height:1.1;margin:.1em 0}
     .lead{color:var(--text);max-width:820px}
@@ -69,6 +69,18 @@
     .on-dark{color:#ffffff}
     .on-dark a{color:#fff;text-decoration:underline}
     .on-dark .btn{background:#ffffff;color:#1e3a8a;border:1px solid #cbd5e1}
+    /* --- Header override to ensure big blue banner --- */
+    :root{--header-h:96px}
+    header{background:var(--accent)!important;color:#ffffff!important;box-shadow:0 10px 24px rgba(2,6,23,.18)!important;border-bottom:0!important}
+    header .inner{padding:28px 28px!important}
+    a.brand{color:#ffffff!important}
+    nav a{color:rgba(255,255,255,.95)!important}
+    nav a:hover{color:#ffffff!important}
+    /* make the logo icon white/visible on blue */
+    header svg path{stroke:#ffffff!important}
+    header svg circle{fill:#ffc72c!important}
+    /* give hero more top space below the taller sticky header */
+    .hero{padding-top:120px}
   </style>
 </head>
 <body>
@@ -92,7 +104,7 @@
     <section class="hero">
       <span class="pill tag">Marshall Pyramid • Falls Church / Tysons</span>
       <h1>Keep our neighborhood at <span style="color:var(--accent)">Lemon Road ES</span></h1>
-      <p class="lead">We support Scenario 4 for Lemon Road Elementary School. A community petition to remove 25% of the Lemon Road students has been circulating and we are here to voice our opposition to removing our kids from their school. We’re asking FCPS to prioritize <strong>proximity</strong>, <strong>minimal change</strong>, and <strong>operational feasibility.</p>
+      <p class="lead">We support Scenario 4 for Lemon Road Elementary School. A community petition to remove 25% of the Lemon Road students has been circulating and we are here to voice our opposition to removing our kids from their school. We’re asking FCPS to prioritize <strong>proximity</strong>, <strong>minimal change</strong>, and <strong>operational feasibility</strong>.</p>
       <div class="cta">
         <a class="btn primary" href="https://c.org/NG9QM2sSMV" target="_blank" rel="noopener">Sign the Petition</a>
         <a class="btn" href="#action">2‑Minute Action Plan</a>
@@ -233,6 +245,7 @@
       <h2>Map of proposed change</h2>
       <div class="card">
         <img src="boundary.png" alt="Map highlighting the proposed boundary change area for Lemon Road ES" style="width:100%;height:auto;border-radius:12px;display:block"/>
+        <p class="muted small" style="margin-top:8px">If the image does not load, ensure <code>boundary.png</code> is uploaded to the same folder as <code>index.html</code> (or update the path).</p>
       </div>
     </section>
   </main>
