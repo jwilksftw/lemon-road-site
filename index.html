@@ -28,8 +28,8 @@
     body{margin:0;font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";color:#000000;background:var(--bg);}  
     .wrap{max-width:1100px;margin:0 auto;padding:20px}
     header{position:sticky;top:0;background:var(--accent);color:#ffffff;backdrop-filter:none;z-index:50;border-bottom:0;box-shadow:0 6px 18px rgba(2,6,23,.18)}
-    header .inner{display:flex;gap:16px;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto;padding:20px 24px}
-    a.brand{display:flex;gap:10px;align-items:center;text-decoration:none;color:#ffffff}
+    header .inner{display:flex;flex-direction:column;gap:10px;align-items:flex-start;justify-content:center;max-width:1100px;margin:0 auto;padding:28px 28px}
+    a.brand{display:none}
     .badge{font-size:.75rem;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.18);color:#ffffff;border:1px solid rgba(255,255,255,.35)}
     nav a{color:rgba(255,255,255,.9);text-decoration:none;margin-left:18px}
     nav a:hover{color:#ffffff}
@@ -62,7 +62,7 @@
     .table th,.table td{border-bottom:1px solid #243244;padding:10px 8px;text-align:left}
     .table th{color:#cbd5e1;font-weight:600}
     .small{font-size:.9rem}
-    .qr{max-width:150px;border-radius:10px;border:1px solid #1f2937}
+    
     .tag{background:rgba(37,99,235,.12);color:#1d4ed8}
     .card.tinted{background:linear-gradient(180deg, rgba(37,99,235,.95), rgba(37,99,235,.85));border:1px solid #1e40af;color:#ffffff}
     .card.tinted .muted{color:#e5e7eb}
@@ -81,11 +81,14 @@
     header svg circle{fill:#ffc72c!important}
     /* give hero more top space below the taller sticky header */
     .hero{padding-top:120px}
+    .site-banner{width:100vw;max-width:none;height:auto;display:block;border-radius:0;margin-left:calc(50% - 50vw)}
+    .topnav{display:flex;gap:18px;flex-wrap:wrap}
   </style>
 </head>
 <body>
   <header>
     <div class="inner">
+      <img class="site-banner" src="lres_opposition_banner.png" alt="Lemon Road Elementary School — Neighborhood Boundary Change Opposition" />
       <a class="brand" href="#top">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l7.794 4.5v9L12 21 4.206 16.5v-9L12 3z" stroke="#2563eb" stroke-width="1.2"/><circle cx="12" cy="12" r="2.3" fill="#ffc72c"/></svg>
         <strong>Keep Lemon Road</strong>
@@ -135,11 +138,8 @@
           </p>
         </div>
       </div>
-      <div class="notice small" style="margin-top:12px">Prefer a print handout? Use the one‑pager above or the QR code below to share quickly at meetings.</div>
-      <div style="margin-top:14px;display:flex;gap:18px;align-items:center;flex-wrap:wrap">
-        <img class="qr" src="/petition_qr.png" alt="QR code linking to petition" />
-        <div class="muted small">Scan to open petition • Replace <code>/petition_qr.png</code> with your actual file path.
-          <div style="margin-top:6px"><span class="pill">mailto</span> <a href="mailto:jwilksftw@gmail.com">jwilksftw@gmail.com</a> · <span class="pill">sms</span> <a href="tel:17034895157">703‑489‑5157</a></div>
+      <div class="notice small" style="margin-top:12px">Prefer a print handout? Use the one‑pager above to share quickly at meetings.</div>
+      
         </div>
       </div>
     </section>
