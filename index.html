@@ -7,66 +7,46 @@
   <meta name="description" content="Community hub for parents and neighbors advocating to keep our area at Lemon Road Elementary School. Learn the facts, see dates, and take action in under a minute." />
   <!-- Social sharing -->
   <meta property="og:title" content="Keep Our Neighborhood at Lemon Road ES" />
-  <meta property="og:description" content="Facts, dates, and one-click actions to keep our area at Lemon Road ES." />
+  <meta property="og:description" content="Facts, dates, and one‑click actions to keep our area at Lemon Road ES." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="/social-card.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Keep Our Neighborhood at Lemon Road ES" />
-  <meta name="twitter:description" content="Facts, dates, and one-click actions to keep our area at Lemon Road ES." />
-  <meta name="theme-color" content="#2563eb" />
+  <meta name="twitter:description" content="Facts, dates, and one‑click actions to keep our area at Lemon Road ES." />
+  <meta name="theme-color" content="#0f766e" />
   <style>
     :root{
-      --bg:#ffffff;
-      --card:#ffffff;
-      --muted:#475569;
-      --text:#000000;
-      --accent:#2563eb;
-      --accent-2:#60a5fa;
-      --warn:#f59e0b;
+      --bg:#ffffff;      /* white background */
+      --card:#ffffff;    /* white cards */
+      --muted:#475569;   /* slate-600 text */
+      --text:#000000;    /* slate-900 */
+      --accent:#2563eb;  /* BLUE primary */
+      --accent-2:#60a5fa;/* light blue */
+      --warn:#f59e0b;    /* amber */
     }
     html{scroll-behavior:smooth}
-    body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";color:var(--text);background:var(--bg);}
+    body{margin:0;font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";color:#000000;background:var(--bg);}  
     .wrap{max-width:1100px;margin:0 auto;padding:20px}
-
-    /* Header */
-    header{position:sticky;top:0;background:var(--accent);color:#fff;z-index:50;box-shadow:0 6px 18px rgba(2,6,23,.18)}
-    header .inner{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:1100px;margin:0 auto;padding:14px 20px;flex-wrap:wrap}
+    header{position:sticky;top:0;background:var(--accent);color:#ffffff;backdrop-filter:none;z-index:50;border-bottom:0;box-shadow:0 6px 18px rgba(2,6,23,.18)}
+    header .inner{display:flex;gap:16px;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto;padding:14px 20px}
+    a.brand{display:none}
+    .badge{font-size:.75rem;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.18);color:#ffffff;border:1px solid rgba(255,255,255,.35)}
     nav a{color:rgba(255,255,255,.9);text-decoration:none;margin-left:18px}
-    nav a:hover{color:#fff}
-
-    /* Banner image — never crop/clip; stays on left half; scales down on small screens */
-    .site-banner{
-      display:block;
-      width:min(46vw, 520px);
-      max-width:520px;
-      height:auto;               /* avoid clipping */
-      object-fit:contain;        /* preserve aspect ratio */
-      border-radius:8px;
-      box-shadow:0 3px 10px rgba(2,6,23,.12);
-      margin:2px 0;
-    }
-    @media (max-width: 700px){
-      header .inner{justify-content:center}
-      .site-banner{width:90vw;max-width:600px;margin:4px auto}
-      nav{width:100%;display:flex;justify-content:center;gap:16px;margin-top:6px}
-      nav a{margin-left:0}
-    }
-
-    .hero{padding:40px 20px}
+    nav a:hover{color:#ffffff}
+    .hero{padding:60px 20px 40px}
     .hero h1{font-size:clamp(28px,6vw,48px);line-height:1.1;margin:.1em 0}
     .lead{color:var(--text);max-width:820px}
     .cta{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0}
-
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:1px solid #e2e8f0;text-decoration:none;color:var(--text);background:#fff;box-shadow:0 4px 14px rgba(2,6,23,.05)}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:1px solid #e2e8f0;text-decoration:none;color:var(--text);background:#ffffff;box-shadow:0 4px 14px rgba(2,6,23,.05)}
     .btn:hover{border-color:var(--accent);box-shadow:0 6px 18px rgba(37,99,235,.12)}
     .btn:focus{outline:3px solid rgba(37,99,235,.25);outline-offset:2px}
     .btn[aria-disabled="true"], .btn.disabled{opacity:.55;pointer-events:none}
-    .btn.primary{background:var(--accent);color:#fff;border:1px solid var(--accent);box-shadow:0 6px 18px rgba(37,99,235,.25)}
+    .btn.primary{background:var(--accent);color:#ffffff;border:1px solid var(--accent);box-shadow:0 6px 18px rgba(37,99,235,.25)}
     .btn.primary:hover{filter:brightness(0.98)}
-
     .grid{display:grid;gap:18px}
     @media(min-width:900px){.grid.cols-3{grid-template-columns:repeat(3,1fr)}.grid.cols-2{grid-template-columns:1.2fr 1fr}}
     .card{background:var(--card);border:1px solid #e5e7eb;border-radius:16px;padding:18px;box-shadow:0 6px 20px rgba(2,6,23,.06)}
+    .kpi{font-size:28px;font-weight:700}
     .muted{color:var(--muted)}
     .section{padding:18px 20px}
     h2{font-size:clamp(22px,4.6vw,34px)}
@@ -74,22 +54,46 @@
     ul{margin:0 0 0 1.1em}
     li{margin:.35em 0}
     .pill{display:inline-block;font-size:12px;padding:3px 8px;border-radius:999px;background:#1f2937;color:#e5e7eb;border:1px solid #334155}
-
+    .notice{border-left:4px solid var(--warn);padding:12px 14px;background:#1f2937;border-radius:8px}
+    footer{padding:40px 20px;color:#94a3b8}
+    .footer-grid{display:grid;gap:16px}
+    @media(min-width:800px){.footer-grid{grid-template-columns:1fr auto}}
     .table{width:100%;border-collapse:collapse}
     .table th,.table td{border-bottom:1px solid #243244;padding:10px 8px;text-align:left}
     .table th{color:#cbd5e1;font-weight:600}
     .small{font-size:.9rem}
-
-    footer{padding:40px 20px;color:#94a3b8}
-    .footer-grid{display:grid;gap:16px}
-    @media(min-width:800px){.footer-grid{grid-template-columns:1fr auto}}
+    
+    .tag{background:rgba(37,99,235,.12);color:#1d4ed8}
+    .card.tinted{background:linear-gradient(180deg, rgba(37,99,235,.95), rgba(37,99,235,.85));border:1px solid #1e40af;color:#ffffff}
+    .card.tinted .muted{color:#e5e7eb}
+    .on-dark{color:#ffffff}
+    .on-dark a{color:#fff;text-decoration:underline}
+    .on-dark .btn{background:#ffffff;color:#1e3a8a;border:1px solid #cbd5e1}
+    /* --- Header override to ensure big blue banner --- */
+    :root{--header-h:96px}
+    header{background:var(--accent)!important;color:#ffffff!important;box-shadow:0 10px 24px rgba(2,6,23,.18)!important;border-bottom:0!important}
+    header .inner{padding:28px 28px!important}
+    a.brand{color:#ffffff!important}
+    nav a{color:rgba(255,255,255,.95)!important}
+    nav a:hover{color:#ffffff!important}
+    /* make the logo icon white/visible on blue */
+    header svg path{stroke:#ffffff!important}
+    header svg circle{fill:#ffc72c!important}
+    /* give hero more top space below the taller sticky header */
+    .hero{padding-top:120px}
+    .site-banner{display:block;width:clamp(280px, 42vw, 480px);height:auto;object-fit:contain;border-radius:8px;box-shadow:0 3px 10px rgba(2,6,23,.12);margin:2px 0}
+    .topnav{display:flex;gap:18px;flex-wrap:wrap}
   </style>
 </head>
 <body>
   <header>
     <div class="inner">
-      <!-- Use the padded banner version so edges never clip -->
-      <img class="site-banner" src="lres_opposition_banner_v2.png" alt="Lemon Road Elementary School — Neighborhood Boundary Change Opposition" />
+      <img class="site-banner" src="lres_opposition_banner_v3.png" alt="Lemon Road Elementary School — Neighborhood Boundary Change Opposition" />
+      <a class="brand" href="#top">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l7.794 4.5v9L12 21 4.206 16.5v-9L12 3z" stroke="#2563eb" stroke-width="1.2"/><circle cx="12" cy="12" r="2.3" fill="#ffc72c"/></svg>
+        <strong>Keep Lemon Road</strong>
+        <span class="badge">Community site</span>
+      </a>
       <nav>
         <a href="#action">Take action</a>
         <a href="#why">Why this matters</a>
@@ -101,18 +105,22 @@
 
   <main id="top" class="wrap">
     <section class="hero">
-      <span class="pill" style="background:rgba(37,99,235,.12);color:#1d4ed8;border-color:#c7d2fe">Marshall Pyramid • Falls Church / Tysons</span>
+      <span class="pill tag">Marshall Pyramid • Falls Church / Tysons</span>
       <h1>Keep our neighborhood at <span style="color:var(--accent)">Lemon Road ES</span></h1>
       <p class="lead">We support Scenario 4 for Lemon Road Elementary School. A community petition to remove 25% of the Lemon Road students has been circulating and we are here to voice our opposition to removing our kids from their school. We’re asking FCPS to prioritize <strong>proximity</strong>, <strong>minimal change</strong>, and <strong>operational feasibility</strong>.</p>
       <div class="cta">
         <a class="btn primary" href="https://c.org/NG9QM2sSMV" target="_blank" rel="noopener">Sign the Petition</a>
-        <a class="btn" href="#action">2-Minute Action Plan</a>
-        <a class="btn" href="Draft%20One%20Pager.pdf" download target="_blank" rel="noopener">Download One-Pager (PDF)</a>
+        <a class="btn" href="#action">2‑Minute Action Plan</a>
+        <a class="btn" href="Draft%20One%20Pager.pdf" download target="_blank" rel="noopener">Download One‑Pager (PDF)</a>
+      </div>
+      <div class="kpi">~650</div><div class="muted small">≈38% of Lemon Road zone</div></div>
+        <div class="card"><div class="muted">Receiver capacity</div><div class="kpi">Insufficient</div><div class="muted small">Freedom Hill would likely need splits/modulars</div></div>
+        <div class="card"><div class="muted">Closest school</div><div class="kpi">Lemon Road</div><div class="muted small">Proximity & shortest trips</div></div>
       </div>
     </section>
 
     <section id="action" class="section">
-      <h2>2-Minute Action Plan</h2>
+      <h2>2‑Minute Action Plan</h2>
       <div class="grid cols-2">
         <div class="card">
           <h3>1) Add your name</h3>
@@ -122,7 +130,137 @@
         </div>
         <div class="card">
           <h3>2) Send meeting feedback</h3>
-          <p>Submit unique, specific comments so they aren’t de-duplicated as spam.</p>
+          <p>Submit unique, specific comments so they aren’t de‑duplicated as spam.</p>
           <p>
             <a class="btn" href="https://www.fcpsboundaryreview.org/" target="_blank" rel="noopener">Boundary Explorer</a>
-            <a class="btn" href="https://www.fcps.edu/about-fcps/policies-regulations-and-notices/school-boundary-adjustments" target
+            <a class="btn" href="https://www.fcps.edu/about-fcps/policies-regulations-and-notices/school-boundary-adjustments" target="_blank" rel="noopener">Process & Contacts</a>
+          </p>
+        </div>
+      </div>
+      <div class="notice small" style="margin-top:12px">Prefer a print handout? Use the one‑pager above to share quickly at meetings.</div>
+      
+        </div>
+      </div>
+    </section>
+
+    <section id="why" class="section">
+      <h2>Key Talking Points</h2>
+      <div class="grid cols-1">
+        <div class="card">
+          <h3>1. Strong Community Connections</h3>
+          <ul>
+            <li>Our families are deeply woven into the Lemon Road community — from PTA and classroom volunteers to student leaders and after‑school programs.</li>
+            <li>Lemon Road fosters meaningful relationships across neighborhoods; our children’s friendships and cohorts are firmly established here.</li>
+            <li>Every student community within Lemon Road deserves equal consideration and stability; removing our neighborhood would disrupt about a quarter of the school’s student body.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>2. Maintaining Stability & Avoiding Unnecessary Disruptions</h3>
+          <ul>
+            <li>Scenario 4 presents <strong>no changes</strong> to Lemon Road’s existing boundaries — a solution the broader community supports.</li>
+            <li>A last‑minute rezoning would upend a year‑long process and create avoidable instability for students, families, and staff.</li>
+            <li>Moving our neighborhood would reduce Lemon Road’s enrollment below 80%, risking cuts to programs, staffing, and resources.</li>
+            <li>Families would face logistical challenges with Freedom Hill’s later start time (<strong>9:20 a.m.</strong> vs. <strong>8:15 a.m.</strong>) and limited before/after‑care availability.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>3. Cohort Continuity & Academic Consistency</h3>
+          <ul>
+            <li>Students from our neighborhood progress through the same AAP and secondary pathways as their peers, preserving academic and social continuity.</li>
+            <li>Rezoning would fragment pathways and trigger unnecessary transfers, particularly for AAP‑eligible students who would travel significantly farther (e.g., Westbriar is ~2.5× farther than Lemon Road).</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>4. Capacity & Planning Data Do Not Support Boundary Changes</h3>
+          <ul>
+            <li>FCPS projections show overall declining enrollment through 2030 due to birth rates and housing trends.</li>
+            <li>Scenario 4 already relieves Kilmer’s overcrowding by resolving other split‑feeder issues; there’s no justification for an extra, unnecessary elementary move.</li>
+            <li>Freedom Hill’s capacity is not identified as a current FCPS priority for adjustment.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>5. Safety & Transportation</h3>
+          <ul>
+            <li>No elementary students in our neighborhoods cross Route 7 on foot; all are bused or driven.</li>
+            <li>Rerouting buses would add costs and logistical burdens amid existing driver shortages.</li>
+            <li>Major roads border all nearby schools (Route 7, Great Falls, Gallows, Chain Bridge, etc.); singling out one neighborhood as a safety concern is inconsistent.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>6. Socioeconomic & Policy Considerations</h3>
+          <ul>
+            <li>Our neighborhood contributes to the socioeconomic diversity that enriches Lemon Road’s learning environment.</li>
+            <li>Removing townhomes and apartments while retaining predominantly higher‑priced single‑family homes would make both Lemon Road and Freedom Hill less balanced, contrary to FCPS equity goals.</li>
+            <li>Lemon Road’s mission, centered on the “Other People Matter Mindset,” thrives on its diversity and inclusivity.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>7. Process Integrity</h3>
+          <ul>
+            <li>The Pimmit Hills proposal reflects only a small subset of that community and was introduced late without collaboration or transparency.</li>
+            <li>We value our long‑standing friendships within the Lemon Road community and are disappointed that disruptive recommendations advanced without discussion.</li>
+            <li>We urge FCPS and the School Board to maintain stability, equity, and community continuity by keeping our neighborhood at Lemon Road ES.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline" class="section">
+      <h2>Key Dates & Next Steps</h2>
+      <table class="table small">
+        <thead><tr><th>Date</th><th>Event</th><th>Details</th></tr></thead>
+        <tbody>
+          <tr><td>Oct 2025</td><td>Community meetings</td><td>Presentation + Q&A; submit Boundary Explorer comments the same day.</td></tr>
+          <tr><td>Nov–Dec 2025</td><td>Advisory committee review</td><td>Scenario refinements; staff compile comments.</td></tr>
+          <tr><td>Early 2026</td><td>Board work sessions / decisions</td><td>Opportunities for public comment at Board meetings.</td></tr>
+        </tbody>
+      </table>
+      <p class="muted small">*Timeline is illustrative. Replace with official dates as FCPS posts updates.</p>
+    </section>
+
+    <section id="faq" class="section">
+      <h2>FAQ</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>Isn’t cleaning up a split‑feeder always good?</h3>
+          <p>No. FCPS policy also prioritizes <strong>proximity</strong> and <strong>minimal change</strong>. Exporting a large, proximate cohort just to tidy a map causes unnecessary disruption.</p>
+        </div>
+        <div class="card">
+          <h3>Why not just move us to Freedom Hill?</h3>
+          <p>The scale (~650 households) would likely exceed available seats and require multi‑school splits or temporary classrooms—adding complexity and cost.</p>
+        </div>
+        <div class="card">
+          <h3>How can I help?</h3>
+          <p>Sign and share the petition; post a unique comment in the Boundary Explorer; tell a neighbor; attend meetings; and email staff/Board with your story.</p>
+        </div>
+        <div class="card">
+          <h3>Media / Contact</h3>
+          <p>Email <a href="mailto:jwilksftw@gmail.com">jwilksftw@gmail.com</a> for quotes, background, or data tables.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="proposed-map" class="section">
+      <h2>Map of proposed change</h2>
+      <div class="card">
+        <img src="boundary.png" alt="Map highlighting the proposed boundary change area for Lemon Road ES" style="width:100%;height:auto;border-radius:12px;display:block"/>
+        <p class="muted small" style="margin-top:8px">If the image does not load, ensure <code>boundary.png</code> is uploaded to the same folder as <code>index.html</code> (or update the path).</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <div class="footer-grid">
+      <div>
+        <strong>Keep Lemon Road</strong>
+        <div class="muted small">Community-led, volunteer site for parents and neighbors.</div>
+      </div>
+      <div class="muted small">© <span id="year"></span> Neighbors for Lemon Road • This site is not affiliated with FCPS.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
